@@ -8,13 +8,31 @@ html(lang="en")
         title Zoom
     body
         header 
-            h1 It Works !!
+            h1 ZOOM
         main
-            ul 
-            form#nickname
-                input(type="text", placeholder="choose a nickname", required)
-                button save
-            form#message
-                input(type="text", placeholder="write a message", required)
-                button send
+            #welcome  
+                form(action="")
+                    input(type="text", placeholder="Room Name", required)
+                    button(type="submit") Enter Room
+                h4 Open Rooms :
+                ul 
+            #room
+                h3 
+                ul 
+                form#name
+                    input(type="text", placeholder="Nickname", required)
+                    button(type="submit") Send    
+                form#message
+                    input(type="text", placeholder="Message", required)
+                    button(type="submit") Send                    
+
+            //- ul 
+            //- form#nickname
+            //-     input(type="text", placeholder="choose a nickname", required)
+            //-     button save
+            //- form#message
+            //-     input(type="text", placeholder="write a message", required)
+            //-     button send
+             
+        script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")
